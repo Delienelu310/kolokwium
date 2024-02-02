@@ -1,0 +1,66 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>580</y><w>260</w><h>130</h></coordinates><panel_attributes>Basket
+--
++positions: List&lt;Position&gt;
++discountPrice: Integer
+--
++addPosition(in: Integer, in: Product)
++getBasePrice(): Float 
++setDiscountPrice(in: Float ): void 
++getDiscountPrice():: Float</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>580</y><w>220</w><h>140</h></coordinates><panel_attributes>Position
+--
++product: Product
++quantity: Integer
++discountPrice: Integer
+--
++getBasePrice(): Float 
++setDiscountPrice(in: Float ): void 
++getDiscountPrice():: Float</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>580</y><w>220</w><h>130</h></coordinates><panel_attributes>Product
+--
++id: Integer
++discountPrice: Integer
+--
++getBasePrice(): Float 
++setDiscountPrice(in: Float ): void 
++getDiscountPrice():: Float</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>620</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>620</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1360</x><y>210</y><w>290</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Discount
+--
++getPriority(): Integer
++setPirceWithDiscount(in: BasketNode): Float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>300</y><w>240</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+BasketNode
+--
++getBasePrice(): Float 
++setDiscountPrice(in: Float ): void 
++getDiscountPrice():: Float</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>400</y><w>310</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>290;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>400</y><w>30</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>400</y><w>290</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;270;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1130</x><y>400</y><w>360</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+ProductDiscount
+--
+-priority: Integer {final}
+--
++getPriotiry(): Integer
++setPirceWithDiscount(in: BasketNode): Float {abstract}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1130</x><y>590</y><w>360</w><h>90</h></coordinates><panel_attributes>PercentProductDiscount
+--
++percent: Float
++productId: Integer
+--
++setPirceWithDiscount(in: BasketNode): Float</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1310</x><y>310</y><w>200</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>180;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1280</x><y>500</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>0</y><w>260</w><h>130</h></coordinates><panel_attributes>DiscountApplier
+--
++discounts: List&lt;Discount&gt;
+--
++removeDiscount(in Discount): void
++addDiscount(in Discount): void 
++setDiscountPrice(in BasketNode): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1070</x><y>60</y><w>440</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;420;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1580</x><y>400</y><w>350</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+BasketDiscount
+--
+-priority: Integer {final}
+--
++getPriotiry(): Integer
++setPirceWithDiscount(in: BasketNode): Float {abstract}</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1500</x><y>310</y><w>220</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;200;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1750</x><y>500</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1580</x><y>580</y><w>350</w><h>130</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+BasketSpecialDayPercentDiscount
+--
++percent: Float
++day:Date
++title: String
+--
++setPirceWithDiscount(in: BasketNode): Float</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>120</y><w>260</w><h>200</h></coordinates><panel_attributes>lt=&lt;-
+Calculate
+discount</panel_attributes><additional_attributes>240;10;10;180</additional_attributes></element></diagram>
