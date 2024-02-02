@@ -24,4 +24,18 @@ public class DiscountApplier {
             discount.setPirceWithDiscount(basketNode);
         }
     }
+
+
+    // Algorithm used:
+    //1. Divide list of discounts on different lists based on their priority (bigger priority ALWAYS goes first)
+    //1.2 Optimisation - remove discount that do not influence the price
+    //2. Change the lists order to change the prices (we can use dynamic programming for this task for example)
+    //3. Choose the biggest/lowest price
+    public void setDiscountPriceBiggest(BasketNode basketNode){
+
+    }
+
+    public void setDiscountPriceLowest(BasketNode basketNode){
+
+    }
 }
